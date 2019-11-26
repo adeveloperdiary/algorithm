@@ -75,9 +75,9 @@ class LRU_Cache(object):
         else:
             key_to_be_deleted = self.tail.value
             self.tail = self.tail.left
-            self.tail.right=None
+            self.tail.right = None
 
-            value, pointer = self.hm[key_to_be_deleted]
+            _, pointer = self.hm[key_to_be_deleted]
             del self.hm[key_to_be_deleted]
 
             new_node = Node(key)
@@ -91,18 +91,22 @@ class LRU_Cache(object):
             self.hm[key] = (value, pointer)
 
 
-our_cache = LRU_Cache(5)
+if __name__ == "__main__":
+    # Test Cases
+    our_cache = LRU_Cache(5)
 
-our_cache.set(1, 1)
-our_cache.set(2, 2)
-our_cache.set(3, 3)
-our_cache.set(4, 4)
+    our_cache.set(1, 1)
+    our_cache.set(2, 2)
+    our_cache.set(3, 3)
+    our_cache.set(4, 4)
 
-print(our_cache.get(1))  # returns 1
-print(our_cache.get(2))  # returns 2
-print(our_cache.get(9))  # returns -1 because 9 is not present in the cache
+    print(our_cache.get(1))  # returns 1
+    print(our_cache.get(2))  # returns 2
+    print(our_cache.get(9))  # returns -1 because 9 is not present in the cache
 
-our_cache.set(5, 5)
-our_cache.set(6, 6)
+    our_cache.set(5, 5)
+    our_cache.set(6, 6)
 
-print(our_cache.get(3))
+    print(our_cache.get(6))  # returns 1
+
+    print(our_cache.get(3))  # returns -1
