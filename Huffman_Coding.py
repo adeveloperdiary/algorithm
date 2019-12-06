@@ -16,7 +16,7 @@ class Node:
         return self.value < other.value
 
     def __str__(self):
-        return str("{} : {}".format(self.value, self.data))
+        return str("{} : {}".format(self.value, self.data, self.data_dict))
 
 
 def huffman_encoding(data):
@@ -73,8 +73,19 @@ def huffman_encoding(data):
     return encoded, root
 
 
-def huffman_decoding(data, tree):
-    pass
+def huffman_decoding(data, tree: Node):
+    decoded = ''
+    node = tree
+    for i in range(len(data)):
+        if data[i] == '0':
+            node = node.left
+        else:
+            node = node.right
+
+        if node.data is not None:
+            decoded += node.data
+            node = tree
+    return decoded
 
 
 if __name__ == "__main__":
