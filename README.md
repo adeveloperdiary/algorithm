@@ -10,3 +10,4 @@
  - Quick Sort with Fixed Pivot
  - Quick Sort Random Pivot
  - Sudoku with naked twines
+ - Huffman Coding
