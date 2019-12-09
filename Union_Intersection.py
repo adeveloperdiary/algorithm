@@ -1,3 +1,22 @@
+"""
+Runtime: 
+1. union : O(n^2)
+2. intersection : O(n^2)
+
+Design:
+1. Used a Linked List to store the array
+2. Added find function in the LinkedList class
+3. for union:
+    1. Created a new empty Linked List (new_linked_list).
+    2. Loop through the 1st LL, add uniqeue values to the empty Linked List
+    3. Loop through the 2nd LL, add uniqeue values to the new_linked_list.
+4. for intersection:
+    1. Created a new empty Linked List (new_linked_list).
+    2. Loop through 1st LL, verify whether the value is already in 2nd LL
+    3. if True, then add the value to the new_linked_list
+
+"""
+
 class Node:
     def __init__(self, value):
         self.value = value
