@@ -1,3 +1,14 @@
+"""
+Runtime: 
+1. add : O(1)
+2. get : O(n)
+3. delete : O(n)
+
+Design: 
+1. Used a Linked list to create the Blockchain.
+
+"""
+
 import hashlib
 import datetime
 
