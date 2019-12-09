@@ -1,3 +1,11 @@
+"""
+Runtime : O(n)
+
+Design:
+1. Use recursive approach to get all the nested groups.
+
+"""
+
 class Group(object):
     def __init__(self, _name):
         self.name = _name
@@ -43,10 +51,12 @@ def is_user_in_group(user, group):
     if group is None or user is None:
         return False
 
+    # If the group has sub groups
     if group.get_groups() is not None:
         for g in group.get_groups():
             return is_user_in_group(user, g)
 
+    # If the group has other users
     if group.get_users() is not None:
         users = group.get_users()
         if user in users:
