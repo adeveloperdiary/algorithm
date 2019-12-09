@@ -1,3 +1,13 @@
+"""
+Runtime: 
+Assume an encoded text string of length n and an alphabet of k symbols
+1. huffman encoding : O(nlogk)
+2. huffman decoding : O(klogn)
+
+
+
+"""
+
 import sys
 from collections import defaultdict, OrderedDict
 import heapq
