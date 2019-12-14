@@ -12,3 +12,4 @@
  - Sudoku with naked twines
  - Huffman Coding
  - Union Intersection of Linked List
+ - Search in a Rotated Sorted Array
