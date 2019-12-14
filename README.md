@@ -13,3 +13,4 @@
  - Huffman Coding
  - Union Intersection of Linked List
  - Search in a Rotated Sorted Array
+ - Rearrange Array Elements using Merger Sort for 2 numbers
